@@ -1,0 +1,10 @@
+
+# vim kustomize-sample/03.overlays/overlays/stag/config-map.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-cfg
+data:
+  password: stag-pwd-123
+  username: stag-acc-123
+

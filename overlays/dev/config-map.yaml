@@ -1,0 +1,8 @@
+# vim kustomize-sample/03.overlays/overlays/dev/config-map.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-cfg
+data:
+  password: dev-pwd-123
+  username: dev-acc-123

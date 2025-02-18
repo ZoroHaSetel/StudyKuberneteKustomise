@@ -1,0 +1,9 @@
+# vim kustomize-sample/03.overlays/overlays/prod/config-map.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-cfg
+data:
+  password: prod-pwd-123
+  username: prod-acc-123
+
