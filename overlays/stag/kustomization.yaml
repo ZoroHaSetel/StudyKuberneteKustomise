@@ -1,20 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
-nameSuffix: -stag #(chú ý đổi Suffix trong cả 3 file)
-
-bases:
-  - ../../base
-  
+nameSuffix: -stag
 resources:
-  - config-map.yaml
-
+- config-map.yaml
+- ../../base
 #patch json6902 demo replace
 patches:
-  - target:
-      kind: Deployment
-      name: nginx-api
-    patch: |-
-      - op: replace
-        path: /spec/replicas
-        value: 9
+- patch: |-
+    - op: replace
+      path: /spec/replicas
+      value: 9
+  target:
+    kind: Deployment
+    name: nginx-api

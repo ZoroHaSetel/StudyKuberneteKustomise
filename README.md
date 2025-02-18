@@ -6,3 +6,11 @@ Study resource from https://viblo.asia/p/su-dung-kustomize-bXP4WPBKJ7G
 - component to dynamic add config deployment
 - config map for credential
 - transformer for common tag
+
+# fix syntax
+
+kustomize edit fix
+
+# build resource 
+overlays\stag
+kustomize build .
